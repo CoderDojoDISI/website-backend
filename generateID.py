@@ -7,7 +7,7 @@ def getNextSequence(name):
 
     if not db.counters.find_one({'_id': name}) :
         db.counters.insert_one({
-            "_id": "faq",
+            "_id": name,
             "seq" : 0
         })
 
