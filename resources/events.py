@@ -7,7 +7,7 @@ events_schema = {
     'description': {
         'type': 'string',
         'required': True,
-        'maxlength': 600
+        'maxlength': 1000
     },
     'urls': {
         'type' : 'dict',
@@ -19,6 +19,10 @@ events_schema = {
                 'type' : 'string'
             }
         },
+    },
+    'date': {
+        'type': 'string',
+        'required': True
     }
 }
 
