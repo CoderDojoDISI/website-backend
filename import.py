@@ -309,7 +309,7 @@ mentor = {
     "firstname": "'James' Luca",
     "lastname": "Bosotti",
     "roles": ["CoderDojo Mentor"],
-    "description": "Per me la tecnologia deve essere al servizio della creatività, trovo affascinante utilizzare l’informatica in ambiti in cui generalmente non è presente. Sono una persona curiosa e mi piace esplorare e scoprire cose nuove. Ho praticato moltisport in passato, quasi mai in maniera agonistica, passando dai classici come la pallavolo ad altri più curiosi come il golf fino al più recente: rievocazione del tiro con l’arco."
+    "description": "Per me la tecnologia deve essere al servizio della creatività, trovo affascinante utilizzare l’informatica in ambiti in cui generalmente non è presente. Sono una persona curiosa e mi piace esplorare e scoprire cose nuove. Ho praticato molti sport in passato, quasi mai in maniera agonistica, passando dai classici come la pallavolo ad altri più curiosi come il golf fino al più recente: rievocazione del tiro con l’arco."
 }
 r = s.post(mentors_url, json=mentor)
 fileName = Path("static/img/Profile_pic/bosotti_profile.jpg")
