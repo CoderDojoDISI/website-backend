@@ -1,9 +1,10 @@
 # -*- coding: utf8 -*-
 import mimetypes
-import requests
 from pathlib import Path
 
-url = "http://localhost:8000/api/"
+import requests
+
+url = "http://coderdojodisi_nginx_1:8000/api/"
 s = requests.Session()
 s.auth = ('', '')
 
