@@ -1,10 +1,6 @@
 import os
 
-from api.resources.courses import courses
-from api.resources.events import events
-from api.resources.faq import faq
-from api.resources.mentors import mentors
-from api.resources.tutorials import tutorials
+import api.resources as res
 
 MONGO_HOST = os.environ["MONGO_HOST"]
 MONGO_USERNAME = os.environ["MONGO_USERNAME"]
@@ -22,11 +18,11 @@ XML = False
 EXTENDED_MEDIA_INFO = ['content_type']
 
 DOMAIN = {
-    'faq': faq,
-    'events': events,
-    'mentors': mentors,
-    'courses' : courses,
-    'tutorials': tutorials
+    'faq': res.faq,
+    'events': res.events,
+    'mentors': res.mentors,
+    'courses': res.courses,
+    'tutorials': res.tutorials
 }
 
 if os.environ["DEVELOPMENT"] :
