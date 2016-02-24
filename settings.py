@@ -1,6 +1,6 @@
 import os
 
-import api.resources as res
+import resources as res
 
 MONGO_HOST = os.environ["MONGO_HOST"]
 MONGO_USERNAME = os.environ["MONGO_USERNAME"]
@@ -25,5 +25,5 @@ DOMAIN = {
     'tutorials': res.tutorials
 }
 
-if os.environ["DEVELOPMENT"] :
+if os.environ.get("DEVELOPMENT") :
     DEBUG = True

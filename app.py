@@ -2,8 +2,8 @@ from eve import Eve
 from eve.auth import BasicAuth
 from flask import Response, abort, request
 
-import api.settings
-from .generateID import generateID
+import settings
+from generateID import generateID
 
 
 class MyAuth(BasicAuth):
@@ -19,8 +19,11 @@ class MyAuth(BasicAuth):
             abort(401, description='Please provide proper credentials', response=resp)
 
 
-SETTINGS_PATH = api.settings.__file__
+SETTINGS_PATH = settings.__file__
 
 app = Eve(auth=MyAuth, settings=SETTINGS_PATH)
 
 app.on_insert += generateID
+
+if __name__ == '__main__':
+    app.run(host='localhost',port=8001, debug=True)

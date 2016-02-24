@@ -1,0 +1,14 @@
+version: '2'
+services:
+  api_server:
+      build:
+        context: ./
+        dockerfile: ./Dockerfile-dev
+      volumes:
+        - ./:/usr/src/app
+      environment:
+        MONGO_HOST: "coderdojodisi_mongo_1"
+        MONGO_USERNAME: ""
+        MONGO_PASSWORD: ""
+        MONGO_DBNAME: "development"
+        DEVELOPMENT: "true"
