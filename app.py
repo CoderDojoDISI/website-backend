@@ -8,7 +8,10 @@ from generateID import generateID
 
 class MyAuth(BasicAuth):
     def check_auth(self, username, password, allowed_roles, resource, method):
-        return False
+        if username == "admin" & password == "admin":
+            return True
+        else:
+            return False
 
     def authenticate(self):
         if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
@@ -26,4 +29,4 @@ app = Eve(auth=MyAuth, settings=SETTINGS_PATH)
 app.on_insert += generateID
 
 if __name__ == '__main__':
-    app.run(host='localhost',port=8001, debug=True)
+    app.run(host='localhost', port=8001, debug=True)
