@@ -8,7 +8,9 @@ from generateID import generateID
 
 class MyAuth(BasicAuth):
     def check_auth(self, username, password, allowed_roles, resource, method):
-        if username == "admin" & password == "admin":
+        print("Username is " + username)
+        print("Password is " + password)
+        if username == 'admin' and password == 'admin':
             return True
         else:
             return False
