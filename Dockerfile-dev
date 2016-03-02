@@ -2,6 +2,6 @@ FROM python:3-onbuild
 
 EXPOSE 8001
 
-ENV PYTHONUNBUFFERED TRUE
+ENV PYTHONUNBUFFERED=TRUE
 
 CMD ["python", "app.py"]
