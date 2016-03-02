@@ -1,8 +1,9 @@
 import pymongo
 from pymongo import ReturnDocument
+from flask import current_app
 
 def getNextSequence(name):
-    client = pymongo.MongoClient()
+    client = current_app.data.driver.db
     db = client.development
 
     if not db.counters.find_one({'_id': name}) :
