@@ -10,7 +10,7 @@ MONGO_DBNAME = os.environ["MONGO_DBNAME"]
 RESOURCE_METHODS = ['GET', 'POST']
 ITEM_METHODS = ['GET', 'PATCH']
 
-if os.environ.get("DEVELOPMENT"):
+if os.environ.get("DEVELOPMENT") == 'true':
   PUBLIC_METHODS = ['GET','POST']
   PUBLIC_ITEM_METHODS = ['GET','PATCH','PUT','DELETE']
 else:
@@ -30,5 +30,7 @@ DOMAIN = {
     'tutorials': res.tutorials
 }
 
-if os.environ.get("DEVELOPMENT") :
+STANDARD_ERRORS = [400, 401, 403, 404, 405, 406, 410, 412, 422, 428]
+
+if os.environ.get("DEVELOPMENT") == 'true':
     DEBUG = True
