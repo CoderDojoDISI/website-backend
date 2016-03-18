@@ -3,8 +3,7 @@ from pymongo import ReturnDocument
 from flask import current_app
 
 def getNextSequence(name):
-    client = current_app.data.driver.db
-    db = client.development
+    db = current_app.data.driver.db
 
     if not db.counters.find_one({'_id': name}) :
         db.counters.insert_one({
